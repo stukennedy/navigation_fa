@@ -19,7 +19,6 @@ Install bower libraries:-
 ```bash
 bower install famous-angular
 bower install angular-ui-router
-bower install underscore
 bower install jquery
 ``` 
 this should download the dependencies into `bower_components`. 
