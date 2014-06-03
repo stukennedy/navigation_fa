@@ -1,11 +1,13 @@
 Simple website using Famo.us-Angular
-====
+===
 
 
 In my previous tutorial I showed how you can quickly get [Famo.us](http://famo.us) and [AngularJS](http://angularjs.org) working together using [Famous-Angular](https://github.com/Famous/famous-angular) to create a simple array of boxes.
 
 ####What shall we make?
 Now let's take it one step further and create a simple website that uses Famo.us to handle animation of a navigation pane and some simple page fade transitions.
+
+Here it is in action as my music website [Stu Kennedy](http://stukennedy.com)
 
 We want the animation to work whether you click on the navigation bar or on a link that should change the navigation, so the navigation bar need to respond to route changes. I decided to go with Angular's optional ui-router module.
 
@@ -233,7 +235,7 @@ The animate method deselects the previous selected box (which we store in `$scop
 
 ---
 
-### Stylesheet
+####Stylesheet
 
 We won't be able to see anything without the stylesheet, which sets the `background-color` for the surfaces amongst other things, so here it is
 
@@ -317,7 +319,7 @@ input, textarea {
 }
 ```
 ---
-### Fading content pane
+####Fading content pane
 
 So we're nearly done, we need to create some content in the `views` folder for our router to find. But there is one more thing ... you may have noticed in our Navbar controller we `$broadcast` two events `transition_in` and `transition_out`. We can pick these up on our `$rootScope` and handle a fade out and fade in.
 
