@@ -1,0 +1,77 @@
+root {
+    display: block;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    background-color: #231F20;
+    color: #fff;
+}
+
+h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 48px;
+    color: #CFCFCD;
+}
+
+h3 {
+    color: #EC1D25;
+}
+
+a {
+    color: #EC1D25;
+}
+
+hr {
+    border-color: #444;
+}
+
+i {
+    color: #CFCFCD;
+}
+
+input, textarea {
+    background-color: #000;
+    border-color: #444;
+    border-width: 1px;
+    border-style: solid;
+    padding: 4px;
+}
+
+.menu {
+    padding-left: 10px;
+    padding-top: 3px;
+    font-family: Helvetica;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #333;
+    border-color: #444;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    color: #EC1D25;
+}
+
+.cursor {
+    background-color: #333;
+    border-color: #444;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.main_content {
+    padding: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #444;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.footer {
+    font-family: Helvetica;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 10px;
+}

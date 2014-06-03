@@ -1,0 +1,47 @@
+<h3>Make Contact</h3>
+
+<div class="row">
+    <div class="pull-left control-group"  style="margin-left: 20px">
+        <label class="control-label" for="first_name">First Name</label>
+        <div class="controls">
+            <input id="first_name" required class="span3" ng-model="email.first_name" placeholder="Your first name">
+        </div>
+
+        <label class="control-label" for="last_name">Last Name</label>
+        <div class="controls">
+            <input id="last_name" required class="span3" ng-model="email.last_name" placeholder="Your last name">
+        </div>
+
+        <label class="control-label" for="email">Email Address</label>
+        <div class="controls">
+            <input id="email" required class="span3" ng-model="email.email" placeholder="Your email address">
+        </div>
+
+        <label class="control-label" for="subject">Subject</label>
+        <div class="controls">
+            <input id="subject" required class="span3" ng-model="email.subject" placeholder="Your email subject">
+        </div>
+    </div>
+
+    <div class="pull-right" style="margin-right: 20px">
+        <label class="control-label" for="message">Message</label>
+        <div class="controls">
+            <textarea
+                      id="message"
+                      required
+                      class="input-xlarge"
+                      ng-model="email.message"
+                      style="width: 500px; max-width: 500px; height: 235px; max-height: 235px;"
+                      rows="9"
+                      style="resize: none">
+            </textarea>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="margin-left: 20px">
+    <br>
+    <button ng-disabled="!allFields(email)" required class="btn btn-primary" ng-click="send_email(email)">Send</button>
+    <h3 ng-hide="allFields(email)">(all fields required)</h3>
+    <h3 ng-show="messageSent">message sent</h3>
+</div>
