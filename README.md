@@ -9,8 +9,6 @@ Now let's take it one step further and create a simple website that uses Famo.us
 
 We want the animation to work whether you click on the navigation bar or on a link that should change the navigation, so the navigation bar need to respond to route changes. I decided to go with Angular's optional ui-router module.
 
-The source code for this can be found [here on Github](https://github.com/continuata/navigation_fa).
-
 ####Before you start, tools you will need
 * Download and install [git](http://git-scm.com/downloads)
 * Download and install [nodeJS](http://nodejs.org/download/)
