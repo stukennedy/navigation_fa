@@ -17,20 +17,18 @@
                 </fa-modifier>
             </fa-view>
             <fa-view>
-                <fa-modifier fa-translate="[20,80]">
-                    <fa-surface fa-size="[180,300]">
-                        <ng-include ng-controller="NavbarCtrl" src="'views/navbar.html'"></ng-include>
-                    </fa-surface>
+                <fa-modifier fa-translate="[20,80]" fa-size="[180,300]">
+                    <ng-include ng-controller="NavbarCtrl" src="'views/navbar.html'"></ng-include>
                 </fa-modifier>
             </fa-view>
-            <fa-view ng-hide ng-controller="ContentCtrl">
+            <fa-view ng-controller="ContentCtrl">
                 <fa-modifier fa-translate="[250,80]" fa-opacity="opacity.get()">
                     <fa-surface fa-size="[800,600]" class="main_content">
                         <ui-view></ui-view>
                     </fa-surface>
                 </fa-modifier>
             </fa-view>
-            <fa-view ng-hide>
+            <fa-view>
                 <fa-modifier fa-translate="[250,685]">
                     <fa-surface fa-size="[800,50]" class="footer">
                         © 2014 Stu Kennedy
