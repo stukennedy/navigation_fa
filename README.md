@@ -35,15 +35,15 @@ Create an index.html which looks like this
     <head>
         <title></title>
         <link rel="stylesheet" href="bower_components/famous-angular/dist/famous-angular.min.css"/>
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
         <link rel="stylesheet" href="css/main.css"/>
     </head>
     <body>
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
         <script src="bower_components/angular/angular.min.js"></script>
-        <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
         <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
         <script src="bower_components/requirejs/require.js"></script>
         <script src="bower_components/famous-angular/dist/famous-angular.min.js"></script>
