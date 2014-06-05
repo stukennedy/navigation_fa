@@ -1,4 +1,4 @@
-<fa-view ng-hide=true ng-repeat="box in boxes">
+<fa-view ng-repeat="box in boxes">
     <fa-modifier fa-translate="[0, (height+5)*$index, 0]">
         <fa-modifier fa-translate="box.trans.get()">
             <fa-surface fa-size="[width,height]"
@@ -10,7 +10,7 @@
         </fa-modifier>
     </fa-modifier>
 </fa-view>
-<fa-view ng-hide=true>
+<fa-view>
     <fa-modifier fa-translate="cursor.get()">
         <fa-surface
                     fa-size="[10,height]"

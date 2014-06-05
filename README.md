@@ -22,6 +22,8 @@ Install bower libraries:-
 bower install famous-angular
 bower install angular-ui-router
 bower install jquery
+bower install angular-animate
+bower install bootstrap
 ``` 
 this should download the dependencies into `bower_components`. 
 
