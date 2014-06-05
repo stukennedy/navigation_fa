@@ -111,20 +111,18 @@ let's go back to `index.html` and create some Famo.us views to contain the vario
         </fa-modifier>
     </fa-view>
     <fa-view>
-        <fa-modifier fa-translate="[20,80]">
-            <fa-surface fa-size="[180,300]">
-                <ng-include ng-controller="NavbarCtrl" src="'views/navbar.html'"></ng-include>
-            </fa-surface>
+        <fa-modifier fa-translate="[20,80]" fa-size="[180,300]">
+            <ng-include ng-controller="NavbarCtrl" src="'views/navbar.html'"></ng-include>
         </fa-modifier>
     </fa-view>
-    <fa-view ng-hide ng-controller="ContentCtrl">
+    <fa-view ng-controller="ContentCtrl">
         <fa-modifier fa-translate="[250,80]" fa-opacity="opacity.get()">
             <fa-surface fa-size="[800,600]" class="main_content">
                 <ui-view></ui-view>
             </fa-surface>
         </fa-modifier>
     </fa-view>
-    <fa-view ng-hide>
+    <fa-view>
         <fa-modifier fa-translate="[250,685]">
             <fa-surface fa-size="[800,50]" class="footer">
                 © 2014 Stu Kennedy
@@ -145,7 +143,7 @@ The navigation bar comprises two parts; the template `views/navbar.html` and the
 Here is the template
 
 ```html
-<fa-view ng-hide=true ng-repeat="box in boxes">
+<fa-view ng-repeat="box in boxes">
     <fa-modifier fa-translate="[0, (height+5)*$index, 0]">
         <fa-modifier fa-translate="box.trans.get()">
             <fa-surface fa-size="[width,height]"
@@ -157,7 +155,7 @@ Here is the template
         </fa-modifier>
     </fa-modifier>
 </fa-view>
-<fa-view ng-hide=true>
+<fa-view>
     <fa-modifier fa-translate="cursor.get()">
         <fa-surface
                     fa-size="[10,height]"
@@ -166,7 +164,7 @@ Here is the template
     </fa-modifier>
 </fa-view>
 ```
-This iterates over an array on the `$scope` called `boxes` which holds a Famo.us `Transitionable` for each menu item. Note the `ng-hide=true` ... this fixes an issue when using Famo.us with Angular, whereby, if you style surfaces using CSS you end up with a ghost duplicate of the original surface, due to the way that Famo.us creates surfaces on the DOM.
+This iterates over an array on the `$scope` called `boxes` which holds a Famo.us `Transitionable` for each menu item.
 
 As you can see, the array of menu items are modified according to each respective Transitionable, which we will affect from the controller. Other parameters are also set in the controller, such as the size of the boxes. We also have a cursor surface which will be moved vertically to highlight the selected item.
 
