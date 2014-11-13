@@ -21,8 +21,6 @@ Install bower libraries:-
 ```bash
 bower install famous-angular
 bower install angular-ui-router
-bower install jquery
-bower install angular-animate
 bower install bootstrap
 ``` 
 this should download the dependencies into `bower_components`. 
@@ -40,18 +38,44 @@ Create an index.html which looks like this
         <link rel="stylesheet" href="css/main.css"/>
     </head>
     <body>
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="bower_components/angular/angular.min.js"></script>
-        <script src="bower_components/angular-animate/angular-animate.js"></script>
-        <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-        <script src="bower_components/requirejs/require.js"></script>
-        <script src="bower_components/famous-angular/dist/famous-angular.min.js"></script>
-        <script>
-            //set requirejs's base to where the famous lib folder lives
-            require.config({baseUrl: 'bower_components'});
-        </script>
+        <fa-app style="height: 700px; width: 1400px; margin: 0;">
+            <fa-view>
+                <fa-modifier fa-translate="[250,0]">
+                    <fa-surface fa-size="[800,50]">
+                        <center><h1>my website</h1></center>
+                    </fa-surface>
+                </fa-modifier>
+            </fa-view>
+            <fa-view>
+                <fa-modifier fa-translate="[20,80]" fa-size="[180,300]">
+                    <ng-include ng-controller="NavbarCtrl" src="'views/navbar.html'"></ng-include>
+                </fa-modifier>
+            </fa-view>
+            <fa-view ng-controller="ContentCtrl">
+                <fa-modifier fa-translate="[250,80]" fa-opacity="opacity.get()">
+                    <fa-surface fa-size="[800,600]" class="main_content">
+                        <ui-view></ui-view>
+                    </fa-surface>
+                </fa-modifier>
+            </fa-view>
+            <fa-view>
+                <fa-modifier fa-translate="[250,685]">
+                    <fa-surface fa-size="[800,50]" class="footer">
+                        © 2014 Stu Kennedy
+                    </fa-surface>
+                </fa-modifier>
+            </fa-view>
+        </fa-app>
 
+        <!-- Angular libs -->
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+        <!-- Famous libs -->
+        <script src="bower_components/famous/dist/famous-global.min.js"></script>
+        <script src="bower_components/famous-angular/dist/famous-angular.min.js"></script>
+
+        <!-- Application -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/navbar.js"></script>
         <script src="scripts/controllers/content.js"></script>
@@ -65,7 +89,7 @@ Create an index.html which looks like this
 We will now create a `scripts/app.js` file to create the Angular app and inject famous.angular. Let's add `ui.router` so that we can define all the routes for pages in our website.
 
 ```js
-angular.module('integrationApp',['famous.angular', 'ui.router', 'ngAnimate'])
+angular.module('integrationApp',['famous.angular', 'ui.router'])
 .config(function($stateProvider, $urlRouterProvider){
 
     $urlRouterProvider.otherwise("/");
