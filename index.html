@@ -37,23 +37,17 @@
             </fa-view>
         </fa-app>
 
-
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <!-- Angular libs -->
         <script src="bower_components/angular/angular.min.js"></script>
-        <script src="bower_components/angular-animate/angular-animate.js"></script>
         <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-        <script src="bower_components/requirejs/require.js"></script>
-        <script src="bower_components/famous-angular/dist/famous-angular.min.js"></script>
-        <script>
-            //set requirejs's base to where the famous lib folder lives
-            require.config({baseUrl: 'bower_components'});
-        </script>
 
+        <!-- Famous libs -->
+        <script src="bower_components/famous/dist/famous-global.min.js"></script>
+        <script src="bower_components/famous-angular/dist/famous-angular.min.js"></script>
+
+        <!-- Application -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/navbar.js"></script>
         <script src="scripts/controllers/content.js"></script>
-
-
     </body>
 </html>
